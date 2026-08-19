@@ -1,7 +1,9 @@
-// Placeholder wiring — replace stubs once accounts/links exist:
-//   - lead magnet + masterclass forms -> email capture endpoint (ManyChat/SendPulse or simple form backend)
-//   - booking buttons -> IntaSend (M-Pesa + card) or OpenNode (BTC) checkout, then Calendly/Cal.com
-//     (providers chosen per Pollen's comparison, 2026-08-19: IntaSend over Pesapal, OpenNode over BTCPay for launch)
+// Launch model: all payment methods (M-Pesa/Pochi la Biashara, BTC/Bitnob,
+// Sendwave) are manually confirmed for now — see #payment section. The
+// payment-confirm form below has no backend yet (needs Formspree or similar).
+// Fast-follow: Bitnob has a webhook API (btc.lightning.received.success) that
+// could auto-confirm BTC once an API key exists — Pochi la Biashara has no
+// API, so M-Pesa stays manual either way. Booking/Calendly link still TODO.
 
 document.querySelectorAll("form[data-form]").forEach((form) => {
   form.addEventListener("submit", (e) => {
@@ -9,7 +11,9 @@ document.querySelectorAll("form[data-form]").forEach((form) => {
     const status = document.querySelector(`[data-status-for="${form.id}"]`);
     if (status) {
       status.hidden = false;
-      status.textContent = "Form capture isn't wired to an email provider yet — TODO before launch.";
+      status.textContent = form.dataset.form === "payment-confirm"
+        ? "Form isn't wired to a backend yet — TODO before launch. metaangels will approve confirmations by hand until then."
+        : "Form capture isn't wired to an email provider yet — TODO before launch.";
     }
   });
 });
@@ -17,11 +21,8 @@ document.querySelectorAll("form[data-form]").forEach((form) => {
 document.querySelectorAll(".btn--book").forEach((btn) => {
   btn.addEventListener("click", () => {
     const service = btn.dataset.service;
-    const terms = btn.dataset.terms; // "full" | "deposit"
-    alert(
-      `Booking for "${service}" (${terms === "deposit" ? "50% deposit" : "pay in full"}) ` +
-      `isn't connected to a payment provider yet. This button will trigger checkout ` +
-      `(IntaSend or OpenNode) once accounts are set up, then hand off to Calendly/Cal.com.`
-    );
+    const select = document.querySelector('#payment-confirm-form select[name="service"]');
+    if (select) select.value = service;
+    document.querySelector("#payment").scrollIntoView({ behavior: "smooth" });
   });
 });

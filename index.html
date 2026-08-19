@@ -24,7 +24,8 @@
 <section id="proof" class="section section--strip">
   <div class="stat"><span class="stat__num">5K</span><span class="stat__label">reach</span></div>
   <div class="stat"><span class="stat__num">50%</span><span class="stat__label">engagement</span></div>
-  <div class="stat"><span class="stat__num"><!-- TODO: follower count from rate card -->—</span><span class="stat__label">followers</span></div>
+  <div class="stat"><span class="stat__num">2.6K</span><span class="stat__label">Instagram followers</span></div>
+  <div class="stat"><span class="stat__num">5K</span><span class="stat__label">X followers</span></div>
   <p class="proof__collabs">Past collaborations: Our Wonderhouse · The Spread Pod</p>
 </section>
 
@@ -140,14 +141,40 @@
     <li><strong>Free follow-up:</strong> included free for 6 months after any reading is delivered (aftercare — separate from the paid Clarity Consultation, which is for people who haven't booked a reading yet).</li>
   </ul>
   <h3>Payment methods</h3>
+  <p class="section__sub">M-Pesa is moving to instant auto-confirm via IntaSend once that account clears KYC (usually ~1 business day) — <!-- TODO(metaangels): start the IntaSend signup, needs business reg + KRA Tax Certificate --> until then, all three methods below are confirmed by hand: pay, then submit your reference so your slot can be approved.<!-- NOTE: BTC via Bitnob has a webhook API (btc.lightning.received.success) and could auto-confirm too once an API key is wired in — worth doing alongside IntaSend rather than standing up OpenNode separately, since a Bitnob address already exists. --></p>
   <ul class="payment-methods">
-    <li><strong>M-Pesa (Kenya):</strong> instant confirmation<!-- TODO(metaangels): wire IntaSend STK push once account is approved --></li>
-    <li><strong>BTC (international):</strong> ~10 min for on-chain confirmation<!-- TODO(metaangels): wire OpenNode invoice once account exists --></li>
-    <li><strong>Sendwave (international):</strong> manual confirmation — upload your payment screenshot below, approved by hand, may take a bit longer.</li>
+    <li><strong>M-Pesa (Kenya) — Pochi la Biashara:</strong> <code>+254 704 147 879</code> <em>(temporary — switching to IntaSend)</em></li>
+    <li><strong>BTC / Lightning:</strong> <code>wandia@bitnob.io</code></li>
+    <li><strong>Sendwave (international):</strong> send to the M-Pesa number above via Sendwave</li>
   </ul>
-  <form id="sendwave-form" class="form" data-form="sendwave-confirm" hidden>
-    <!-- TODO: enable once Sendwave receiving details are provided -->
+  <form id="payment-confirm-form" class="form form--stacked" data-form="payment-confirm">
+    <label>Your email <input type="email" name="email" required></label>
+    <label>Service booked
+      <select name="service" required>
+        <option value="">Select...</option>
+        <option value="tarot">Tarot Reading — $22.22</option>
+        <option value="clarity">Clarity Consultation — $22</option>
+        <option value="natal-planets">Natal Chart — Planets — $77.77</option>
+        <option value="natal-houses">Natal Chart — Houses — $77.77</option>
+        <option value="natal-aspects">Natal Chart — Aspects — $77.77</option>
+        <option value="natal-degree">Natal Chart — Degree Theory — $77.77</option>
+        <option value="natal-bundle">Natal Chart Bundle — $199</option>
+        <option value="solar-return">Solar Return — $111.11</option>
+      </select>
+    </label>
+    <label>Paid via
+      <select name="method" required>
+        <option value="">Select...</option>
+        <option value="mpesa">M-Pesa (Pochi la Biashara)</option>
+        <option value="btc">BTC / Lightning</option>
+        <option value="sendwave">Sendwave</option>
+      </select>
+    </label>
+    <label>M-Pesa/transaction reference or screenshot link <input type="text" name="reference" required></label>
+    <button type="submit">Submit for approval</button>
   </form>
+  <p class="form__status" data-status-for="payment-confirm-form" hidden></p>
+  <!-- TODO(metaangels): this form has nowhere to send data yet — needs a form backend (e.g. Formspree) or the Bitnob API key to start automating BTC confirmation -->
 </section>
 
 <section id="faq" class="section">
