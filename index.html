@@ -5,200 +5,324 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>metaangels by Wandiology — Astrology &amp; Tarot</title>
 <meta name="description" content="Astrology and Tarot readings, masterclasses, and consultations with metaangels by Wandiology.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<header class="hero">
-  <img class="hero__photo" src="assets/headshot.jpg" alt="metaangels by Wandiology" onerror="this.style.display='none'">
-  <h1>metaangels <span class="hero__by">by Wandiology</span></h1>
-  <p class="hero__tagline"><!-- TODO(metaangels): confirm tone -->Astrology &amp; Tarot for people who want real answers, not just vibes.</p>
-  <p class="hero__credibility">8 years in Astrology, 3 in Tarot, certified in Astrological Analysis.</p>
-</header>
+<section class="hero">
+  <div class="hero__stars" id="stars-hero" aria-hidden="true"></div>
+  <div class="hero__water"></div>
 
-<section id="about" class="section">
-  <h2>About</h2>
-  <p><strong>Wandia Mugo, Eng (she/her)</strong>, creatively known as <strong>Wandiology</strong>, is a Civil, Structural and Software Engineer. She is also a Creative Makeup Artist honing her 5H Venus Mars conjunction in Cancer. A native of Nairobi, Kenya (born and raised), she always believed she was multifaceted so when she stumbled into astrology, she belonged. Currently pursuing an astrology degree, she believes it is a powerful framework for personal and spiritual growth and transformation.</p>
-  <p>Wandia is a Virgo Sun (Decan I), Aries Moon and is ruled by an 11H Capricorn Jupiter. She practices both modern and traditional techniques, mostly destigmatizing astrology in Kenya and Africa by teaching astrology within her local and international community — on the ground and through her astrology podcast. She is an avid seeker of knowledge, forever learning and course correcting.</p>
+  <nav class="nav">
+    <span class="nav__brand">&#10022; metaangels</span>
+    <div class="nav__links">
+      <a class="nav__link" href="#about">About</a>
+      <a class="nav__link" href="#services">Services</a>
+      <a class="nav__link" href="#masterclass">Masterclass</a>
+      <a class="nav__link" href="#faq">FAQ</a>
+      <a class="nav__cta" href="#services">Book a reading</a>
+    </div>
+  </nav>
+
+  <div class="hero__center">
+    <div class="hero__orbit" aria-hidden="true">
+      <svg width="620" height="620" viewBox="0 0 620 620" fill="none">
+        <circle cx="310" cy="310" r="308" stroke="#FEE09D" stroke-width="0.6" stroke-dasharray="1 7" opacity="0.55"/>
+        <circle cx="310" cy="310" r="238" stroke="#34C8C5" stroke-width="0.6" opacity="0.35"/>
+        <circle cx="310" cy="310" r="168" stroke="#DF84BD" stroke-width="0.6" opacity="0.3"/>
+      </svg>
+    </div>
+
+    <div class="hero__content">
+      <div class="hero__eyebrow">
+        <span>Astrology</span><span class="hero__eyebrow-sep">&#10022;</span><span>Tarot</span>
+      </div>
+
+      <div class="hero__avatar">
+        <img src="assets/headshot.jpg" alt="metaangels by Wandiology" onerror="this.closest('.hero__avatar').style.background='transparent'; this.remove()">
+      </div>
+
+      <h1 class="hero__title">metaangels<span class="hero__by">by Wandiology</span></h1>
+
+      <p class="hero__tagline">Astrology &amp; Tarot for people who want real answers, not just vibes.</p>
+
+      <p class="hero__credibility">8 years in Astrology, 3 in Tarot, certified in Astrological Analysis.</p>
+
+      <div class="hero__ctas">
+        <a class="btn-pill btn-pill--primary" href="#services">Book a reading</a>
+        <a class="btn-pill btn-pill--ghost" href="#guide">Get the free guide</a>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section id="proof" class="section section--strip">
-  <div class="stat"><span class="stat__num">5K</span><span class="stat__label">reach</span></div>
-  <div class="stat"><span class="stat__num">50%</span><span class="stat__label">engagement</span></div>
-  <div class="stat"><span class="stat__num">2.7K</span><span class="stat__label">Instagram followers</span></div>
-  <div class="stat"><span class="stat__num">5K</span><span class="stat__label">X followers</span></div>
-  <p class="proof__collabs">Past collaborations: Our Wonderhouse · The Spread Pod</p>
+<section id="proof" class="proof">
+  <div class="proof__inner">
+    <div class="proof__stats">
+      <div class="stat"><span class="stat__num">5K</span><span class="stat__label">reach</span></div>
+      <div class="stat"><span class="stat__num">50%</span><span class="stat__label">engagement</span></div>
+      <div class="stat"><span class="stat__num">2.7K</span><span class="stat__label">Instagram followers</span></div>
+      <div class="stat"><span class="stat__num">5K</span><span class="stat__label">X followers</span></div>
+    </div>
+    <p class="proof__collabs">Past collaborations: Our Wonderhouse &middot; The Spread Pod</p>
+  </div>
 </section>
 
-<section id="guide" class="section section--card">
-  <h2>Get your free guide</h2>
-  <!-- TODO(metaangels): pick which guide launches first — Big 3 Starter Guide / 3 Signs You Need a Natal Chart / One-Card Tarot Pull -->
-  <p class="section__sub">Enter your email and I'll send it straight over.</p>
-  <form id="guide-form" class="form" data-form="lead-magnet">
-    <input type="email" name="email" placeholder="you@email.com" required>
-    <button type="submit">Send me the guide</button>
-  </form>
-  <p class="form__status" data-status-for="guide-form" hidden></p>
+<section id="about" class="band">
+  <div class="band-inner about__grid">
+    <div class="about__left">
+      <span class="eyebrow">01 &middot; About</span>
+      <h2 class="about__heading">Charts read closely,<br><em>not loosely.</em></h2>
+    </div>
+    <div class="about__right">
+      <p class="about__body"><strong>Wandia Mugo, Eng (she/her)</strong>, creatively known as <strong>Wandiology</strong>, is a Civil, Structural and Software Engineer. She is also a Creative Makeup Artist honing her 5H Venus Mars conjunction in Cancer. A native of Nairobi, Kenya (born and raised), she always believed she was multifaceted so when she stumbled into astrology, she belonged. Currently pursuing an astrology degree, she believes it is a powerful framework for personal and spiritual growth and transformation.</p>
+      <p class="about__body">Wandia is a Virgo Sun (Decan I), Aries Moon and is ruled by an 11H Capricorn Jupiter. She practices both modern and traditional techniques, mostly destigmatizing astrology in Kenya and Africa by teaching astrology within her local and international community — on the ground and through her astrology podcast. She is an avid seeker of knowledge, forever learning and course correcting.</p>
+      <div class="about__rule"></div>
+      <p class="about__quote">Every natal reading includes a 100+ page report and a recorded Zoom interpretation session, which you keep.</p>
+    </div>
+  </div>
 </section>
 
-<section id="masterclass" class="section section--card">
-  <h2>Join the free weekly Masterclass</h2>
-  <p class="section__sub">Live every week on Zoom, recorded if you can't make it live.</p>
-  <form id="masterclass-form" class="form" data-form="masterclass">
-    <input type="email" name="email" placeholder="you@email.com" required>
-    <button type="submit">Save my spot</button>
-  </form>
-  <a class="link-secondary" href="#" data-replay-link>Watch the last replay</a>
-  <!-- TODO(metaangels): drop in Calendly/Cal.com embed for the recurring session once the link exists -->
-</section>
+<section class="capture-band">
+  <div class="capture-grid">
 
-<section id="services" class="section">
-  <h2>Services &amp; pricing</h2>
-  <div class="pricing-grid">
+    <div id="guide" class="capture-card capture-card--guide">
+      <span class="capture-card__eyebrow">Free guide</span>
+      <h3 class="capture-card__title">Get your free guide</h3>
+      <!-- TODO(metaangels): pick which guide launches first — Big 3 Starter Guide / 3 Signs You Need a Natal Chart / One-Card Tarot Pull -->
+      <p class="capture-card__sub">Enter your email and I'll send it straight over.</p>
+      <form id="guide-form" class="form-inline" data-form="lead-magnet">
+        <input class="input-pill" type="email" name="email" placeholder="you@email.com" required>
+        <button class="btn-pill--small btn-pill--teal" type="submit">Send me the guide</button>
+      </form>
+      <p class="capture-card__status" data-status-for="guide-form" hidden></p>
+    </div>
 
-    <article class="price-card">
-      <h3>Weekly Masterclass</h3>
-      <p class="price-card__price">Free</p>
-      <p>Live/recorded intro session via Zoom</p>
-      <p class="price-card__terms">None — email capture only</p>
-      <a class="btn" href="#masterclass">Save my spot</a>
-    </article>
-
-    <article class="price-card">
-      <h3>Tarot Reading</h3>
-      <p class="price-card__price">$22.22</p>
-      <p>Two questions per reading</p>
-      <p class="price-card__terms">100% upfront</p>
-      <button class="btn btn--book" data-service="tarot" data-price="22.22" data-terms="full">Book Now</button>
-    </article>
-
-    <article class="price-card">
-      <h3>Clarity Consultation</h3>
-      <p class="price-card__price">$22</p>
-      <p>General Q&amp;A call, 30 minutes, no chart produced</p>
-      <p class="price-card__terms">100% upfront</p>
-      <button class="btn btn--book" data-service="clarity" data-price="22" data-terms="full">Book Now</button>
-    </article>
-
-    <article class="price-card">
-      <h3>Natal Chart — Planets</h3>
-      <p class="price-card__price">$77.77</p>
-      <p>Breakdown of personal &amp; generational planets</p>
-      <p class="price-card__terms">50% non-refundable deposit + 50% on completion</p>
-      <button class="btn btn--book" data-service="natal-planets" data-price="77.77" data-terms="deposit">Book Now</button>
-    </article>
-
-    <article class="price-card">
-      <h3>Natal Chart — Houses</h3>
-      <p class="price-card__price">$77.77</p>
-      <p>Breakdown of natal houses</p>
-      <p class="price-card__terms">50% non-refundable deposit + 50% on completion</p>
-      <button class="btn btn--book" data-service="natal-houses" data-price="77.77" data-terms="deposit">Book Now</button>
-    </article>
-
-    <article class="price-card">
-      <h3>Natal Chart — Aspects</h3>
-      <p class="price-card__price">$77.77</p>
-      <p>Breakdown of aspects in natal chart</p>
-      <p class="price-card__terms">50% non-refundable deposit + 50% on completion</p>
-      <button class="btn btn--book" data-service="natal-aspects" data-price="77.77" data-terms="deposit">Book Now</button>
-    </article>
-
-    <article class="price-card">
-      <h3>Natal Chart — Degree Theory</h3>
-      <p class="price-card__price">$77.77</p>
-      <p>Adds meaning to placements by degree</p>
-      <p class="price-card__terms">50% non-refundable deposit + 50% on completion</p>
-      <button class="btn btn--book" data-service="natal-degree" data-price="77.77" data-terms="deposit">Book Now</button>
-    </article>
-
-    <article class="price-card">
-      <h3>Natal Chart Bundle</h3>
-      <p class="price-card__price">$199</p>
-      <p>Planets + Houses + Aspects together (vs $233.31 à la carte)</p>
-      <p class="price-card__terms">50% non-refundable deposit + 50% on completion</p>
-      <button class="btn btn--book" data-service="natal-bundle" data-price="199" data-terms="deposit">Book Now</button>
-    </article>
-
-    <article class="price-card">
-      <h3>Solar Return</h3>
-      <p class="price-card__price">$111.11</p>
-      <p>Chart for the moment the Sun returns to birth position</p>
-      <p class="price-card__terms">50% non-refundable deposit + 50% on completion</p>
-      <button class="btn btn--book" data-service="solar-return" data-price="111.11" data-terms="deposit">Book Now</button>
-    </article>
+    <div id="masterclass" class="capture-card capture-card--masterclass">
+      <span class="capture-card__eyebrow">Weekly &middot; Free</span>
+      <h3 class="capture-card__title">Join the free weekly Masterclass</h3>
+      <p class="capture-card__sub">Live every week on Zoom, recorded if you can't make it live.</p>
+      <form id="masterclass-form" class="form-inline" data-form="masterclass">
+        <input class="input-pill" type="email" name="email" placeholder="you@email.com" required>
+        <button class="btn-pill--small btn-pill--deep" type="submit">Save my spot</button>
+      </form>
+      <div class="capture-card__footer">
+        <a class="link-replay" href="#" data-replay-link>Watch the last replay</a>
+        <span class="capture-card__status" data-status-for="masterclass-form" hidden></span>
+      </div>
+      <!-- TODO(metaangels): drop in Calendly/Cal.com embed for the recurring session once the link exists -->
+    </div>
 
   </div>
-
-  <p class="note">Planets and houses are interpreted together.</p>
-  <p class="note">The Natal Chart reading includes a 100+ page report and a recorded Zoom interpretation session, which you keep.</p>
 </section>
 
-<section id="payment" class="section">
-  <h2>How payment works</h2>
-  <ul class="payment-terms">
-    <li><strong>Natal Chart / Solar Return:</strong> 50% non-refundable deposit to start; remaining 50% due once you're satisfied.</li>
-    <li><strong>Tarot Reading / Clarity Consultation:</strong> paid in full at time of booking.</li>
-    <li><strong>Free follow-up:</strong> included free for 6 months after any reading is delivered (aftercare — separate from the paid Clarity Consultation, which is for people who haven't booked a reading yet).</li>
-  </ul>
-  <h3>Payment methods</h3>
-  <p class="section__sub">All three methods below are confirmed by hand: pay, then submit your reference so your slot can be approved.<!-- NOTE: automated auto-confirm is possible later — IntaSend for M-Pesa (needs KYC, currently on hold) or Bitnob's webhook API for BTC (btc.lightning.received.success) — but manual confirmation is the launch model, not a stopgap. --></p>
-  <ul class="payment-methods">
-    <li><strong>M-Pesa (Kenya) — Pochi la Biashara:</strong> <code>+254 704 147 879</code></li>
-    <li><strong>BTC / Lightning:</strong> <code>wandia@bitnob.io</code></li>
-    <li><strong>Sendwave (international):</strong> send to the M-Pesa number above via Sendwave</li>
-  </ul>
-  <form id="payment-confirm-form" class="form form--stacked" data-form="payment-confirm">
-    <label>Your email <input type="email" name="email" required></label>
-    <label>Service booked
-      <select name="service" required>
-        <option value="">Select...</option>
-        <option value="tarot">Tarot Reading — $22.22</option>
-        <option value="clarity">Clarity Consultation — $22</option>
-        <option value="natal-planets">Natal Chart — Planets — $77.77</option>
-        <option value="natal-houses">Natal Chart — Houses — $77.77</option>
-        <option value="natal-aspects">Natal Chart — Aspects — $77.77</option>
-        <option value="natal-degree">Natal Chart — Degree Theory — $77.77</option>
-        <option value="natal-bundle">Natal Chart Bundle — $199</option>
-        <option value="solar-return">Solar Return — $111.11</option>
-      </select>
-    </label>
-    <label>Paid via
-      <select name="method" required>
-        <option value="">Select...</option>
-        <option value="mpesa">M-Pesa (Pochi la Biashara)</option>
-        <option value="btc">BTC / Lightning</option>
-        <option value="sendwave">Sendwave</option>
-      </select>
-    </label>
-    <label>M-Pesa/transaction reference or screenshot link <input type="text" name="reference" required></label>
-    <button type="submit">Submit for approval</button>
-  </form>
-  <p class="form__status" data-status-for="payment-confirm-form" hidden></p>
-  <!-- TODO(metaangels): this form has nowhere to send data yet — needs a form backend (e.g. Formspree) or the Bitnob API key to start automating BTC confirmation -->
+<section id="services" class="band services">
+  <div class="services__stars" id="stars-services" aria-hidden="true"></div>
+  <div class="services__inner">
+    <div class="services__header">
+      <div class="services__heading-group">
+        <span class="eyebrow">02 &middot; Services &amp; pricing</span>
+        <h2 class="services__heading">Choose your <em>reading</em></h2>
+      </div>
+      <p class="services__note">Planets and houses are interpreted together. Free follow-up included for 6 months after any reading is delivered.</p>
+    </div>
+
+    <div class="pricing-grid">
+
+      <article class="price-card">
+        <h3 class="price-card__title">Weekly Masterclass</h3>
+        <p class="price-card__price">Free</p>
+        <p class="price-card__desc">Live/recorded intro session via Zoom</p>
+        <p class="price-card__terms">None &mdash; email capture only</p>
+        <a class="price-card__cta" href="#masterclass">Save my spot &nbsp;&rarr;</a>
+      </article>
+
+      <article class="price-card">
+        <h3 class="price-card__title">Tarot Reading</h3>
+        <p class="price-card__price">$22.22</p>
+        <p class="price-card__desc">Two questions per reading</p>
+        <p class="price-card__terms">100% upfront</p>
+        <button class="price-card__cta--btn btn--book" data-service="tarot" data-price="22.22" data-terms="full">Book Now</button>
+      </article>
+
+      <article class="price-card">
+        <h3 class="price-card__title">Clarity Consultation</h3>
+        <p class="price-card__price">$22</p>
+        <p class="price-card__desc">General Q&amp;A call, 30 minutes, no chart produced</p>
+        <p class="price-card__terms">100% upfront</p>
+        <button class="price-card__cta--btn btn--book" data-service="clarity" data-price="22" data-terms="full">Book Now</button>
+      </article>
+
+      <article class="price-card">
+        <h3 class="price-card__title">Natal Chart &mdash; Planets</h3>
+        <p class="price-card__price">$77.77</p>
+        <p class="price-card__desc">Breakdown of personal &amp; generational planets</p>
+        <p class="price-card__terms">50% deposit + 50% on completion</p>
+        <button class="price-card__cta--btn btn--book" data-service="natal-planets" data-price="77.77" data-terms="deposit">Book Now</button>
+      </article>
+
+      <article class="price-card">
+        <h3 class="price-card__title">Natal Chart &mdash; Houses</h3>
+        <p class="price-card__price">$77.77</p>
+        <p class="price-card__desc">Breakdown of natal houses</p>
+        <p class="price-card__terms">50% deposit + 50% on completion</p>
+        <button class="price-card__cta--btn btn--book" data-service="natal-houses" data-price="77.77" data-terms="deposit">Book Now</button>
+      </article>
+
+      <article class="price-card">
+        <h3 class="price-card__title">Natal Chart &mdash; Aspects</h3>
+        <p class="price-card__price">$77.77</p>
+        <p class="price-card__desc">Breakdown of aspects in natal chart</p>
+        <p class="price-card__terms">50% deposit + 50% on completion</p>
+        <button class="price-card__cta--btn btn--book" data-service="natal-aspects" data-price="77.77" data-terms="deposit">Book Now</button>
+      </article>
+
+      <article class="price-card">
+        <h3 class="price-card__title">Natal Chart &mdash; Degree Theory</h3>
+        <p class="price-card__price">$77.77</p>
+        <p class="price-card__desc">Adds meaning to placements by degree</p>
+        <p class="price-card__terms">50% deposit + 50% on completion</p>
+        <button class="price-card__cta--btn btn--book" data-service="natal-degree" data-price="77.77" data-terms="deposit">Book Now</button>
+      </article>
+
+      <article class="price-card price-card--featured">
+        <span class="price-card__eyebrow">Best value</span>
+        <h3 class="price-card__title">Natal Chart Bundle</h3>
+        <p class="price-card__price">$199</p>
+        <p class="price-card__desc">Planets + Houses + Aspects together (vs $233.31 &agrave; la carte)</p>
+        <p class="price-card__terms">50% deposit + 50% on completion</p>
+        <button class="price-card__cta--btn btn--book" data-service="natal-bundle" data-price="199" data-terms="deposit">Book Now</button>
+      </article>
+
+      <article class="price-card">
+        <h3 class="price-card__title">Solar Return</h3>
+        <p class="price-card__price">$111.11</p>
+        <p class="price-card__desc">Chart for the moment the Sun returns to birth position</p>
+        <p class="price-card__terms">50% deposit + 50% on completion</p>
+        <button class="price-card__cta--btn btn--book" data-service="solar-return" data-price="111.11" data-terms="deposit">Book Now</button>
+      </article>
+
+    </div>
+
+    <p class="services__footnote">Deposits are non-refundable. Payment by M-Pesa, BTC, or Sendwave.</p>
+  </div>
 </section>
 
-<section id="faq" class="section">
-  <h2>FAQ</h2>
-  <details><summary>What's a natal chart?</summary><p><!-- TODO: answer --></p></details>
-  <details><summary>What's included in a reading?</summary><p>A 100+ page report and a recorded Zoom interpretation session, which you keep.</p></details>
-  <details><summary>How long does turnaround take?</summary><p><!-- TODO: answer --></p></details>
-  <details><summary>What happens after I pay my deposit?</summary><p><!-- TODO: answer --></p></details>
-  <details><summary>Do you offer refunds?</summary><p>Deposits are non-refundable.</p></details>
-  <details><summary>Is this a substitute for professional advice?</summary><p>Astrology and tarot content is for entertainment, self-reflection, and personal insight — not a substitute for medical, legal, or financial advice.</p></details>
+<section id="payment" class="band payment">
+  <div class="payment__grid">
+    <div class="payment__left">
+      <span class="eyebrow">03 &middot; How payment works</span>
+      <h2 class="payment__heading">Clear terms,<br><em>before we begin.</em></h2>
+    </div>
+    <div class="payment__right">
+      <div class="payment__terms">
+        <div class="payment__term">
+          <strong class="payment__term-label">Natal Chart / Solar Return</strong>
+          <span class="payment__term-desc">50% non-refundable deposit to start; remaining 50% due once you're satisfied.</span>
+        </div>
+        <div class="payment__term">
+          <strong class="payment__term-label">Tarot Reading / Clarity Consultation</strong>
+          <span class="payment__term-desc">Paid in full at time of booking.</span>
+        </div>
+        <div class="payment__term">
+          <strong class="payment__term-label">Free follow-up</strong>
+          <span class="payment__term-desc">Included free for 6 months after any reading is delivered (aftercare &mdash; separate from the paid Clarity Consultation, which is for people who haven't booked a reading yet).</span>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="payment__methods-heading">Payment methods</h3>
+        <p class="payment__note">All three are confirmed by hand for now: pay, then submit your reference below so your slot can be approved.</p>
+        <div class="payment-row payment-row--mpesa">
+          <strong class="payment-row__label">M-Pesa (Kenya)</strong>
+          <span class="payment-row__desc">Pochi la Biashara &mdash; <span class="payment-row__code">+254 704 147 879</span></span>
+        </div>
+        <div class="payment-row payment-row--btc">
+          <strong class="payment-row__label">BTC / Lightning</strong>
+          <span class="payment-row__desc"><span class="payment-row__code">wandia@bitnob.io</span></span>
+        </div>
+        <div class="payment-row payment-row--sendwave">
+          <strong class="payment-row__label">Sendwave</strong>
+          <span class="payment-row__desc">Send to the M-Pesa number above via Sendwave.</span>
+        </div>
+      </div>
+
+      <form id="payment-confirm-form" class="payment-form" data-form="payment-confirm">
+        <label>Your email <input type="email" name="email" required></label>
+        <label>Service booked
+          <select name="service" required>
+            <option value="">Select...</option>
+            <option value="tarot">Tarot Reading — $22.22</option>
+            <option value="clarity">Clarity Consultation — $22</option>
+            <option value="natal-planets">Natal Chart — Planets — $77.77</option>
+            <option value="natal-houses">Natal Chart — Houses — $77.77</option>
+            <option value="natal-aspects">Natal Chart — Aspects — $77.77</option>
+            <option value="natal-degree">Natal Chart — Degree Theory — $77.77</option>
+            <option value="natal-bundle">Natal Chart Bundle — $199</option>
+            <option value="solar-return">Solar Return — $111.11</option>
+          </select>
+        </label>
+        <label>Paid via
+          <select name="method" required>
+            <option value="">Select...</option>
+            <option value="mpesa">M-Pesa (Pochi la Biashara)</option>
+            <option value="btc">BTC / Lightning</option>
+            <option value="sendwave">Sendwave</option>
+          </select>
+        </label>
+        <label>M-Pesa/transaction reference or screenshot link <input type="text" name="reference" required></label>
+        <button class="btn-pill--small btn-pill--teal" type="submit">Submit for approval</button>
+        <p class="capture-card__status" data-status-for="payment-confirm-form" hidden></p>
+      </form>
+      <!-- TODO(metaangels): this form has nowhere to send data yet — needs a form backend (e.g. Formspree) -->
+    </div>
+  </div>
 </section>
 
-<footer class="section footer">
-  <h2>Contact</h2>
-  <p class="footer__links">
-    <a href="https://www.instagram.com/wandiology/" target="_blank" rel="noopener">Instagram</a> ·
-    <a href="https://twitter.com/wandiology" target="_blank" rel="noopener">X</a> ·
-    <a href="https://www.youtube.com/channel/UCokYGFeN2QcG6fs-4pyLE8g" target="_blank" rel="noopener">YouTube</a> ·
-    <a href="https://open.spotify.com/show/5dnhWQVOfUai23EiKiGQRH" target="_blank" rel="noopener">Spotify</a> ·
-    <a href="https://podcasts.apple.com/ke/podcast/the-wandiology-podcast/id1679150379" target="_blank" rel="noopener">Apple Podcasts</a> ·
-    <a href="https://www.patreon.com/Wandia111" target="_blank" rel="noopener">Patreon</a>
-  </p>
-  <!-- TODO(metaangels): still need an email address and photos/logo for this footer -->
+<section id="faq" class="faq-band">
+  <div class="faq-inner">
+    <div class="faq__header">
+      <span class="eyebrow">04 &middot; FAQ</span>
+      <h2 class="faq__heading">Questions, answered</h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item"><summary>What's a natal chart?</summary><p><!-- TODO: answer --></p></details>
+      <details class="faq-item"><summary>What's included in a reading?</summary><p>A 100+ page report and a recorded Zoom interpretation session, which you keep.</p></details>
+      <details class="faq-item"><summary>How long does turnaround take?</summary><p><!-- TODO: answer --></p></details>
+      <details class="faq-item"><summary>What happens after I pay my deposit?</summary><p><!-- TODO: answer --></p></details>
+      <details class="faq-item"><summary>Do you offer refunds?</summary><p>Deposits are non-refundable.</p></details>
+      <details class="faq-item"><summary>Is this a substitute for professional advice?</summary><p>Astrology and tarot content is for entertainment, self-reflection, and personal insight &mdash; not a substitute for medical, legal, or financial advice.</p></details>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="site-footer__stars" id="stars-footer" aria-hidden="true"></div>
+  <div class="site-footer__inner">
+    <div class="site-footer__top">
+      <h2 class="site-footer__heading">Let's read<br><em>your sky.</em></h2>
+      <div class="site-footer__contact">
+        <span class="site-footer__contact-eyebrow">Contact</span>
+        <div class="site-footer__links">
+          <a href="https://www.instagram.com/wandiology/" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://twitter.com/wandiology" target="_blank" rel="noopener">X</a>
+          <a href="https://www.youtube.com/channel/UCokYGFeN2QcG6fs-4pyLE8g" target="_blank" rel="noopener">YouTube</a>
+          <a href="https://open.spotify.com/show/5dnhWQVOfUai23EiKiGQRH" target="_blank" rel="noopener">Spotify</a>
+          <a href="https://podcasts.apple.com/ke/podcast/the-wandiology-podcast/id1679150379" target="_blank" rel="noopener">Apple Podcasts</a>
+          <a href="https://www.patreon.com/Wandia111" target="_blank" rel="noopener">Patreon</a>
+        </div>
+        <!-- TODO(metaangels): still need an email address and photos/logo -->
+      </div>
+    </div>
+    <div class="site-footer__bottom">
+      <span>&#10022; metaangels</span>
+      <span>For self-reflection, not professional advice</span>
+      <span>MMXXVI</span>
+    </div>
+  </div>
 </footer>
 
 <script src="script.js"></script>

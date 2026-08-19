@@ -21,6 +21,16 @@ for BTC) stays available as a future upgrade if wanted later. The
 payment-confirm form itself has no backend yet (needs Formspree or similar
 just to receive submissions, independent of any payment automation).
 
+**Visual design:** rebuilt to match the high-fidelity design handoff
+metaangels supplied (`Astrology Landing Page Design.zip` — ethereal/oceanic
+starfield theme, Cormorant Garamond + Inter Tight + JetBrains Mono, full
+token set in that handoff's README). Values were moved into `styles.css` as
+real CSS custom properties per that doc's own instruction, not copied as
+inline styles. Starfield is generated in `script.js` with a seeded PRNG
+matching the original prototype's positions; respects
+`prefers-reduced-motion`. Verified with a full-page Puppeteer screenshot pass
+against the design spec section by section.
+
 ## Blocking before launch
 
 1. **Which lead magnet launches first** (Big 3 Starter Guide / 3 Signs You
@@ -29,6 +39,8 @@ just to receive submissions, independent of any payment automation).
 3. **Calendly/Cal.com link** — metaangels says it's created, need the actual URL to embed.
 4. **Form backend** for the payment-confirm form (e.g. Formspree) — currently submits nowhere.
 5. Photos/logo and an email address for the footer.
+6. **Headshot photo** — the design calls for one in the hero avatar ring; falls back to just the gradient ring with no image for now.
+7. **Self-host the Google Fonts** (Cormorant Garamond, Inter Tight, JetBrains Mono) for production instead of the CDN link, per the design handoff's asset notes — not blocking, just listed there.
 
 ## Local preview
 
