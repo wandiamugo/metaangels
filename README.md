@@ -38,9 +38,8 @@ against the design spec section by section.
 2. **Zoom link** for Masterclass + interpretation calls.
 3. **Calendly/Cal.com link** — metaangels says it's created, need the actual URL to embed.
 4. **Form backend** for the payment-confirm form (e.g. Formspree) — currently submits nowhere.
-5. Photos/logo and an email address for the footer.
-6. **Headshot photo** — the design calls for one in the hero avatar ring; falls back to just the gradient ring with no image for now.
-7. **Self-host the Google Fonts** (Cormorant Garamond, Inter Tight, JetBrains Mono) for production instead of the CDN link, per the design handoff's asset notes — not blocking, just listed there.
+5. Logo and an email address for the footer.
+6. **Self-host the Google Fonts** (Cormorant Garamond, Inter Tight, JetBrains Mono) for production instead of the CDN link, per the design handoff's asset notes — not blocking, just listed there.
 
 ## Local preview
 
