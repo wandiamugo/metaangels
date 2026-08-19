@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>metaangels — Astrology &amp; Tarot</title>
+<meta name="description" content="Astrology and Tarot readings, masterclasses, and consultations with metaangels.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="hero">
+  <img class="hero__photo" src="assets/headshot.jpg" alt="metaangels" onerror="this.style.display='none'">
+  <h1>metaangels</h1>
+  <p class="hero__tagline"><!-- TODO(metaangels): confirm tone -->Astrology &amp; Tarot for people who want real answers, not just vibes.</p>
+  <p class="hero__credibility">8 years in Astrology, 3 in Tarot, certified in Astrological Analysis.</p>
+</header>
+
+<section id="about" class="section">
+  <h2>About</h2>
+  <p><!-- TODO(metaangels): paste About copy verbatim from the rate card — not included in the handoff doc --></p>
+</section>
+
+<section id="proof" class="section section--strip">
+  <div class="stat"><span class="stat__num">5K</span><span class="stat__label">reach</span></div>
+  <div class="stat"><span class="stat__num">50%</span><span class="stat__label">engagement</span></div>
+  <div class="stat"><span class="stat__num"><!-- TODO: follower count from rate card -->—</span><span class="stat__label">followers</span></div>
+  <p class="proof__collabs">Past collaborations: Our Wonderhouse · The Spread Pod</p>
+</section>
+
+<section id="guide" class="section section--card">
+  <h2>Get your free guide</h2>
+  <!-- TODO(metaangels): pick which guide launches first — Big 3 Starter Guide / 3 Signs You Need a Natal Chart / One-Card Tarot Pull -->
+  <p class="section__sub">Enter your email and I'll send it straight over.</p>
+  <form id="guide-form" class="form" data-form="lead-magnet">
+    <input type="email" name="email" placeholder="you@email.com" required>
+    <button type="submit">Send me the guide</button>
+  </form>
+  <p class="form__status" data-status-for="guide-form" hidden></p>
+</section>
+
+<section id="masterclass" class="section section--card">
+  <h2>Join the free weekly Masterclass</h2>
+  <p class="section__sub">Live every week on Zoom, recorded if you can't make it live.</p>
+  <form id="masterclass-form" class="form" data-form="masterclass">
+    <input type="email" name="email" placeholder="you@email.com" required>
+    <button type="submit">Save my spot</button>
+  </form>
+  <a class="link-secondary" href="#" data-replay-link>Watch the last replay</a>
+  <!-- TODO(metaangels): drop in Calendly/Cal.com embed for the recurring session once the link exists -->
+</section>
+
+<section id="services" class="section">
+  <h2>Services &amp; pricing</h2>
+  <div class="pricing-grid">
+
+    <article class="price-card">
+      <h3>Weekly Masterclass</h3>
+      <p class="price-card__price">Free</p>
+      <p>Live/recorded intro session via Zoom</p>
+      <p class="price-card__terms">None — email capture only</p>
+      <a class="btn" href="#masterclass">Save my spot</a>
+    </article>
+
+    <article class="price-card">
+      <h3>Tarot Reading</h3>
+      <p class="price-card__price">$22.22</p>
+      <p>Two questions per reading</p>
+      <p class="price-card__terms">100% upfront</p>
+      <button class="btn btn--book" data-service="tarot" data-price="22.22" data-terms="full">Book Now</button>
+    </article>
+
+    <article class="price-card">
+      <h3>Clarity Consultation</h3>
+      <p class="price-card__price">$22</p>
+      <p>General Q&amp;A call, 30 minutes, no chart produced</p>
+      <p class="price-card__terms">100% upfront</p>
+      <button class="btn btn--book" data-service="clarity" data-price="22" data-terms="full">Book Now</button>
+    </article>
+
+    <article class="price-card">
+      <h3>Natal Chart — Planets</h3>
+      <p class="price-card__price">$77.77</p>
+      <p>Breakdown of personal &amp; generational planets</p>
+      <p class="price-card__terms">50% non-refundable deposit + 50% on completion</p>
+      <button class="btn btn--book" data-service="natal-planets" data-price="77.77" data-terms="deposit">Book Now</button>
+    </article>
+
+    <article class="price-card">
+      <h3>Natal Chart — Houses</h3>
+      <p class="price-card__price">$77.77</p>
+      <p>Breakdown of natal houses</p>
+      <p class="price-card__terms">50% non-refundable deposit + 50% on completion</p>
+      <button class="btn btn--book" data-service="natal-houses" data-price="77.77" data-terms="deposit">Book Now</button>
+    </article>
+
+    <article class="price-card">
+      <h3>Natal Chart — Aspects</h3>
+      <p class="price-card__price">$77.77</p>
+      <p>Breakdown of aspects in natal chart</p>
+      <p class="price-card__terms">50% non-refundable deposit + 50% on completion</p>
+      <button class="btn btn--book" data-service="natal-aspects" data-price="77.77" data-terms="deposit">Book Now</button>
+    </article>
+
+    <article class="price-card">
+      <h3>Natal Chart — Degree Theory</h3>
+      <p class="price-card__price">$77.77</p>
+      <p>Adds meaning to placements by degree</p>
+      <p class="price-card__terms">50% non-refundable deposit + 50% on completion</p>
+      <button class="btn btn--book" data-service="natal-degree" data-price="77.77" data-terms="deposit">Book Now</button>
+    </article>
+
+    <article class="price-card">
+      <h3>Natal Chart Bundle</h3>
+      <p class="price-card__price">$199</p>
+      <p>Planets + Houses + Aspects together (vs $233.31 à la carte)</p>
+      <p class="price-card__terms">50% non-refundable deposit + 50% on completion</p>
+      <button class="btn btn--book" data-service="natal-bundle" data-price="199" data-terms="deposit">Book Now</button>
+    </article>
+
+    <article class="price-card">
+      <h3>Solar Return</h3>
+      <p class="price-card__price">$111.11</p>
+      <p>Chart for the moment the Sun returns to birth position</p>
+      <p class="price-card__terms">50% non-refundable deposit + 50% on completion</p>
+      <button class="btn btn--book" data-service="solar-return" data-price="111.11" data-terms="deposit">Book Now</button>
+    </article>
+
+  </div>
+
+  <p class="note">Planets and houses are interpreted together.</p>
+  <p class="note">The Natal Chart reading includes a 100+ page report and a recorded Zoom interpretation session, which you keep.</p>
+</section>
+
+<section id="payment" class="section">
+  <h2>How payment works</h2>
+  <ul class="payment-terms">
+    <li><strong>Natal Chart / Solar Return:</strong> 50% non-refundable deposit to start; remaining 50% due once you're satisfied.</li>
+    <li><strong>Tarot Reading / Clarity Consultation:</strong> paid in full at time of booking.</li>
+    <li><strong>Free follow-up:</strong> included free for 6 months after any reading is delivered (aftercare — separate from the paid Clarity Consultation, which is for people who haven't booked a reading yet).</li>
+  </ul>
+  <h3>Payment methods</h3>
+  <ul class="payment-methods">
+    <li><strong>M-Pesa (Kenya):</strong> instant confirmation<!-- TODO(metaangels): wire IntaSend STK push once account is approved --></li>
+    <li><strong>BTC (international):</strong> ~10 min for on-chain confirmation<!-- TODO(metaangels): wire OpenNode invoice once account exists --></li>
+    <li><strong>Sendwave (international):</strong> manual confirmation — upload your payment screenshot below, approved by hand, may take a bit longer.</li>
+  </ul>
+  <form id="sendwave-form" class="form" data-form="sendwave-confirm" hidden>
+    <!-- TODO: enable once Sendwave receiving details are provided -->
+  </form>
+</section>
+
+<section id="faq" class="section">
+  <h2>FAQ</h2>
+  <details><summary>What's a natal chart?</summary><p><!-- TODO: answer --></p></details>
+  <details><summary>What's included in a reading?</summary><p>A 100+ page report and a recorded Zoom interpretation session, which you keep.</p></details>
+  <details><summary>How long does turnaround take?</summary><p><!-- TODO: answer --></p></details>
+  <details><summary>What happens after I pay my deposit?</summary><p><!-- TODO: answer --></p></details>
+  <details><summary>Do you offer refunds?</summary><p>Deposits are non-refundable.</p></details>
+  <details><summary>Is this a substitute for professional advice?</summary><p>Astrology and tarot content is for entertainment, self-reflection, and personal insight — not a substitute for medical, legal, or financial advice.</p></details>
+</section>
+
+<footer class="section footer">
+  <h2>Contact</h2>
+  <!-- TODO(metaangels): Instagram, email, and any other socials from the rate card -->
+  <p><a href="#">Instagram</a></p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
