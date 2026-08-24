@@ -32,19 +32,37 @@ renderStars("stars-services", 40, { seed: 7, topSpan: 100 });
 renderStars("stars-footer", 31, { seed: 21, topSpan: 100 });
 
 // Launch model: all payment methods (M-Pesa/Pochi la Biashara, BTC/Bitnob,
-// Sendwave) are manually confirmed for now — see #payment section. The
-// payment-confirm form below has no backend yet (needs Formspree or similar).
+// Sendwave) are manually confirmed for now — see #payment section. All three
+// forms submit to Formspree (https://formspree.io/f/xeajwykp), which emails
+// metaangels directly; there is still no auto-approval of bookings.
 
 document.querySelectorAll("form[data-form]").forEach((form) => {
-  form.addEventListener("submit", (e) => {
+  form.addEventListener("submit", async (e) => {
     e.preventDefault();
     const status = document.querySelector(`[data-status-for="${form.id}"]`);
-    if (!status) return;
-    status.hidden = false;
-    if (form.dataset.form === "payment-confirm") {
-      status.textContent = "Form isn't wired to a backend yet — TODO before launch. metaangels will approve confirmations by hand until then.";
-    } else {
-      status.textContent = "Check your inbox — it's on the way. ✦";
+    const submitBtn = form.querySelector('button[type="submit"]');
+    if (submitBtn) submitBtn.disabled = true;
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: { Accept: "application/json" },
+      });
+      if (!response.ok) throw new Error("Form submission failed");
+      if (status) {
+        status.hidden = false;
+        status.textContent = form.dataset.form === "payment-confirm"
+          ? "Got it — metaangels will confirm your booking shortly."
+          : "Check your inbox — it's on the way. ✦";
+      }
+      form.reset();
+    } catch (err) {
+      if (status) {
+        status.hidden = false;
+        status.textContent = "Something went wrong submitting that — please try again or DM metaangels directly.";
+      }
+    } finally {
+      if (submitBtn) submitBtn.disabled = false;
     }
   });
 });

@@ -17,9 +17,11 @@ method choice (M-Pesa/BTC/Sendwave) are decided.
 reference via the form in `#payment` for manual approval) is the launch
 model, not a stopgap — metaangels opted out of the IntaSend KYC process for
 now. Automated auto-confirm (IntaSend for M-Pesa, or Bitnob's webhook API
-for BTC) stays available as a future upgrade if wanted later. The
-payment-confirm form itself has no backend yet (needs Formspree or similar
-just to receive submissions, independent of any payment automation).
+for BTC) stays available as a future upgrade if wanted later. All three
+forms (guide, masterclass, payment-confirm) submit to Formspree
+(`https://formspree.io/f/xeajwykp`), which emails metaangels the
+submission — bookings are still approved by hand, just no longer lost on
+submit.
 
 **Visual design:** rebuilt to match the high-fidelity design handoff
 metaangels supplied (`Astrology Landing Page Design.zip` — ethereal/oceanic
@@ -37,9 +39,8 @@ against the design spec section by section.
    Need a Natal Chart / One-Card Tarot Pull) — needs the actual PDF.
 2. **Zoom link** for Masterclass + interpretation calls.
 3. **Calendly/Cal.com link** — metaangels says it's created, need the actual URL to embed.
-4. **Form backend** for the payment-confirm form (e.g. Formspree) — currently submits nowhere.
-5. Logo and an email address for the footer.
-6. **Self-host the Google Fonts** (Cormorant Garamond, Inter Tight, JetBrains Mono) for production instead of the CDN link, per the design handoff's asset notes — not blocking, just listed there.
+4. Logo and an email address for the footer.
+5. **Self-host the Google Fonts** (Cormorant Garamond, Inter Tight, JetBrains Mono) for production instead of the CDN link, per the design handoff's asset notes — not blocking, just listed there.
 
 ## Local preview
 

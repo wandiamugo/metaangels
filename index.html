@@ -94,7 +94,8 @@
       <h3 class="capture-card__title">Get your free guide</h3>
       <!-- TODO(metaangels): pick which guide launches first — Big 3 Starter Guide / 3 Signs You Need a Natal Chart / One-Card Tarot Pull -->
       <p class="capture-card__sub">Enter your email and I'll send it straight over.</p>
-      <form id="guide-form" class="form-inline" data-form="lead-magnet">
+      <form id="guide-form" class="form-inline" data-form="lead-magnet" action="https://formspree.io/f/xeajwykp" method="POST">
+        <input type="hidden" name="_subject" value="New free guide signup">
         <input class="input-pill" type="email" name="email" placeholder="you@email.com" required>
         <button class="btn-pill--small btn-pill--teal" type="submit">Send me the guide</button>
       </form>
@@ -105,7 +106,8 @@
       <span class="capture-card__eyebrow">Weekly &middot; Free</span>
       <h3 class="capture-card__title">Join the free weekly Masterclass</h3>
       <p class="capture-card__sub">Live every week on Zoom, recorded if you can't make it live.</p>
-      <form id="masterclass-form" class="form-inline" data-form="masterclass">
+      <form id="masterclass-form" class="form-inline" data-form="masterclass" action="https://formspree.io/f/xeajwykp" method="POST">
+        <input type="hidden" name="_subject" value="New Masterclass RSVP">
         <input class="input-pill" type="email" name="email" placeholder="you@email.com" required>
         <button class="btn-pill--small btn-pill--deep" type="submit">Save my spot</button>
       </form>
@@ -250,7 +252,8 @@
         </div>
       </div>
 
-      <form id="payment-confirm-form" class="payment-form" data-form="payment-confirm">
+      <form id="payment-confirm-form" class="payment-form" data-form="payment-confirm" action="https://formspree.io/f/xeajwykp" method="POST">
+        <input type="hidden" name="_subject" value="New booking payment confirmation">
         <label>Your email <input type="email" name="email" required></label>
         <label>Service booked
           <select name="service" required>
@@ -277,7 +280,6 @@
         <button class="btn-pill--small btn-pill--teal" type="submit">Submit for approval</button>
         <p class="capture-card__status" data-status-for="payment-confirm-form" hidden></p>
       </form>
-      <!-- TODO(metaangels): this form has nowhere to send data yet — needs a form backend (e.g. Formspree) -->
     </div>
   </div>
 </section>
