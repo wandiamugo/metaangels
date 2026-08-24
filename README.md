@@ -29,7 +29,7 @@ full like Tarot/Clarity. Own section (`#photobooks`) between Services and
 Payment, horizontal-scroll row of cover cards; cover images only (no full
 PDFs — the site is public/static with no paywall, so anything uploaded as
 an asset is a free download). Currently live: Aries, Taurus, Virgo, Libra,
-Scorpio — more seasons land as metaangels finishes them, same pattern
+Scorpio, Sagittarius — more seasons land as metaangels finishes them, same pattern
 (drop a cover in `assets/photobooks/`, add a card + a matching option in
 the payment-confirm `<select>`).
 
