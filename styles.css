@@ -220,6 +220,7 @@ details summary::-webkit-details-marker { display: none; }
   color: var(--c-couscous);
   margin-top: 0.15em;
 }
+.hero__by-name { color: var(--c-bianchi); }
 
 .hero__tagline {
   max-width: 22ch;
