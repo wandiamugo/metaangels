@@ -23,6 +23,16 @@ forms (guide, masterclass, payment-confirm) submit to Formspree
 submission — bookings are still approved by hand, just no longer lost on
 submit.
 
+**Photobooks:** a second product line, sold standalone (not tied to a
+specific reading — client picks by their own sign). $44.44 each, paid in
+full like Tarot/Clarity. Own section (`#photobooks`) between Services and
+Payment, horizontal-scroll row of cover cards; cover images only (no full
+PDFs — the site is public/static with no paywall, so anything uploaded as
+an asset is a free download). Currently live: Aries, Taurus, Virgo, Libra,
+Scorpio — more seasons land as metaangels finishes them, same pattern
+(drop a cover in `assets/photobooks/`, add a card + a matching option in
+the payment-confirm `<select>`).
+
 **Visual design:** rebuilt to match the high-fidelity design handoff
 metaangels supplied (`Astrology Landing Page Design.zip` — ethereal/oceanic
 starfield theme, Cormorant Garamond + Inter Tight + JetBrains Mono, full

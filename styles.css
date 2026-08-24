@@ -532,6 +532,46 @@ details summary::-webkit-details-marker { display: none; }
 
 .services__footnote { margin: 26px 0 0; font-size: 13px; line-height: 1.7; color: rgba(253,238,234,0.6); }
 
+/* ===== Photobooks ===== */
+.photobooks { background: var(--c-foam); }
+.photobooks__header { display: flex; flex-direction: column; gap: 16px; margin-bottom: clamp(28px, 4vw, 44px); }
+.photobooks__heading {
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: clamp(34px, 4.5vw, 54px);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--c-ink-teal);
+}
+.photobooks__heading em { font-style: italic; color: var(--c-pink-ink); }
+.photobooks__note { max-width: 46ch; font-size: 14px; line-height: 1.7; color: var(--c-plum-body); }
+
+.photobooks__row {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+  padding-bottom: 8px;
+  margin: 0 -4px;
+}
+.photobook-card {
+  flex: 0 0 auto;
+  width: 220px;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 14px;
+  border-radius: var(--r-card);
+  background: rgba(59,36,64,0.04);
+  border: 1px solid rgba(59,36,64,0.12);
+}
+.photobook-card__cover { width: 100%; aspect-ratio: 4 / 3.1; object-fit: cover; border-radius: 12px; }
+.photobook-card__title { font-family: var(--font-display); font-weight: 400; font-size: 20px; line-height: 1.15; color: var(--c-ink-teal); }
+.photobook-card__price { font-family: var(--font-display); font-size: 22px; line-height: 1; color: var(--c-pink-ink); }
+.photobooks .price-card__cta--btn { border-color: rgba(59,36,64,0.3); color: var(--c-ink-teal); }
+.photobooks .price-card__cta--btn:hover { background: var(--c-bianchi); border-color: var(--c-bianchi); color: var(--c-ink-on-teal); }
+
 /* ===== Payment ===== */
 .payment { background: var(--c-foam); }
 .payment__grid {
