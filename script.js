@@ -31,10 +31,10 @@ renderStars("stars-hero", 90, { seed: 1, topSpan: 72 });
 renderStars("stars-services", 40, { seed: 7, topSpan: 100 });
 renderStars("stars-footer", 31, { seed: 21, topSpan: 100 });
 
-// Launch model: all payment methods (M-Pesa/Pochi la Biashara, BTC/Bitnob,
-// Sendwave) are manually confirmed for now — see #payment section. All three
-// forms submit to Formspree (https://formspree.io/f/xeajwykp), which emails
-// metaangels directly; there is still no auto-approval of bookings.
+// Most services book through Paystack. BTC/Lightning is a manual alternative
+// (see #payment section) — that form submits to Formspree
+// (https://formspree.io/f/xeajwykp), which emails metaangels directly for
+// manual approval.
 
 document.querySelectorAll("form[data-form]").forEach((form) => {
   form.addEventListener("submit", async (e) => {
@@ -64,14 +64,5 @@ document.querySelectorAll("form[data-form]").forEach((form) => {
     } finally {
       if (submitBtn) submitBtn.disabled = false;
     }
-  });
-});
-
-document.querySelectorAll(".btn--book").forEach((btn) => {
-  btn.addEventListener("click", () => {
-    const service = btn.dataset.service;
-    const select = document.querySelector('#payment-confirm-form select[name="service"]');
-    if (select) select.value = service;
-    document.querySelector("#payment").scrollIntoView({ behavior: "smooth" });
   });
 });

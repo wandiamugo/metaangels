@@ -247,7 +247,7 @@
         <img class="photobook-card__cover" src="assets/photobooks/scorpio.jpg" alt="The Scorpio Photobook cover">
         <h3 class="photobook-card__title">The Scorpio Photobook</h3>
         <p class="photobook-card__price">$44.44</p>
-        <button class="price-card__cta--btn btn--book" data-service="photobook-scorpio" data-price="44.44" data-terms="full">Buy Now</button>
+        <a class="price-card__cta--btn" href="https://paystack.shop/pay/4gi1jtdnae" target="_blank" rel="noopener">Buy Now</a>
       </article>
 
       <article class="photobook-card">
@@ -496,39 +496,38 @@
 
       <div>
         <h3 class="payment__methods-heading">Payment methods</h3>
-        <p class="payment__note">All three are confirmed by hand for now: pay, then submit your reference below so your slot can be approved.</p>
-        <div class="payment-row payment-row--mpesa">
-          <strong class="payment-row__label">M-Pesa (Kenya)</strong>
-          <span class="payment-row__desc">Pochi la Biashara &mdash; <span class="payment-row__code">+254 704 147 879</span></span>
-        </div>
+        <p class="payment__note">Pay via Paystack on any service above, or send BTC/Lightning directly and confirm below &mdash; for clients abroad or paying outside KES.</p>
         <div class="payment-row payment-row--btc">
           <strong class="payment-row__label">BTC / Lightning</strong>
           <span class="payment-row__desc"><span class="payment-row__code">wandia@bitnob.io</span></span>
         </div>
-        <div class="payment-row payment-row--sendwave">
-          <strong class="payment-row__label">Sendwave</strong>
-          <span class="payment-row__desc">Send to the M-Pesa number above via Sendwave.</span>
-        </div>
       </div>
 
       <form id="payment-confirm-form" class="payment-form" data-form="payment-confirm" action="https://formspree.io/f/xeajwykp" method="POST">
-        <input type="hidden" name="_subject" value="New booking payment confirmation">
+        <input type="hidden" name="_subject" value="New BTC booking payment confirmation">
         <label>Your email <input type="email" name="email" required></label>
         <label>Service booked
           <select name="service" required>
             <option value="">Select...</option>
+            <option value="astrology-101">Astrology 101 Guide — $22.22</option>
+            <option value="clarity">Clarity Consultation — $22.22</option>
+            <option value="tarot">Tarot Reading — $22.22</option>
+            <option value="natal-planets">Natal Chart — Planets — $77.77</option>
+            <option value="natal-houses">Natal Chart — Houses — $77.77</option>
+            <option value="natal-aspects">Natal Chart — Aspects — $77.77</option>
+            <option value="natal-degree">Natal Chart — Degree Theory — $77.77</option>
+            <option value="natal-bundle">Natal Chart Bundle — $199</option>
+            <option value="solar-return">Solar Return — $111.11</option>
+            <option value="masterclass">Venus Unveiled MasterClass — KES 3,333</option>
+            <option value="photobook-aries">Photobook — Aries — $44.44</option>
+            <option value="photobook-taurus">Photobook — Taurus — $44.44</option>
+            <option value="photobook-virgo">Photobook — Virgo — $44.44</option>
+            <option value="photobook-libra">Photobook — Libra — $44.44</option>
             <option value="photobook-scorpio">Photobook — Scorpio — $44.44</option>
+            <option value="photobook-sagittarius">Photobook — Sagittarius — $44.44</option>
           </select>
         </label>
-        <label>Paid via
-          <select name="method" required>
-            <option value="">Select...</option>
-            <option value="mpesa">M-Pesa (Pochi la Biashara)</option>
-            <option value="btc">BTC / Lightning</option>
-            <option value="sendwave">Sendwave</option>
-          </select>
-        </label>
-        <label>M-Pesa/transaction reference or screenshot link <input type="text" name="reference" required></label>
+        <label>Transaction reference or screenshot link <input type="text" name="reference" required></label>
         <button class="btn-pill--small btn-pill--teal" type="submit">Submit for approval</button>
         <p class="capture-card__status" data-status-for="payment-confirm-form" hidden></p>
       </form>
